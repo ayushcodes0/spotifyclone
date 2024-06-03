@@ -108,6 +108,15 @@
     padding-left: 22px;
     margin-bottom: 20px;
 }
+
+.playlist-scroll{
+    max-height: 32vh;
+    overflow-y: scroll;
+    scroll-padding: 0px;
+    scroll-behavior: smooth;
+}
+
+
 .playlist h4{
     color: white;
     margin-bottom: 10px;
@@ -233,7 +242,7 @@
     color: white;
     padding-left: 20px;
     padding-top: 30px;
-    padding-bottom: 12px;
+    padding-bottom: 15px;
 }
 
 .card-container{
@@ -258,6 +267,7 @@
 
 .card h4{
     color: white;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 .card h5{
