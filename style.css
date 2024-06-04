@@ -4,10 +4,24 @@
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    /////////////////////////////////////////////////////////////*/
 
+/* @font-face {
+    font-family: 'CircularSp';
+    src: url('/path/to/fonts/CircularSp-Bold.woff2') format('woff2'),
+         url('/path/to/fonts/CircularSp-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+} */
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background-color: black;
 }
 
 .container{
@@ -67,6 +81,7 @@
     color: rgb(186, 186, 186);
 }
 
+
 .left-bottom{
     border-radius: 8px;
     overflow: hidden;
@@ -78,9 +93,15 @@
 .lb-top img{
     height: 25px;
 }
+
+#plus{
+    height: 16px;
+}
+
 .lb-top a{
     text-decoration: none;
     color: rgb(186, 186, 186);
+    /* font-family: 'CircularSp'; */
 }
 
 .lb-top{
@@ -99,6 +120,36 @@
     align-items: center;
     gap: 8px;
 }
+
+.songs-playlist{
+    background-color: rgb(17, 17, 17);
+    padding: 10px
+}
+
+.songs-playlist ul{
+    color: white;
+}
+
+.songs-playlist ul li{
+    list-style: none;
+    color: white;
+    background-color: rgb(31, 31, 31);
+    padding: 18px 12px;
+    margin: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.music-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 
 .playlist{
     background-color: rgb(31, 31, 31);
@@ -174,6 +225,17 @@
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    /////////////////////////////////////////////////////////////*/
 
 
+.hamberger{
+    display: none;
+    color: rgb(186, 186, 186);
+    font-size: 20px;
+}
+
+
+.right{
+    background-color: rgb(17, 17, 17);
+}
+
 .right .header img{
     height: 15px;
     filter: invert(.6);
@@ -191,6 +253,10 @@
     border-radius: 8px;
     padding-left: 20px;
     padding-right: 20px;
+    opacity: .99;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
 }
 
 .header-left{
@@ -198,7 +264,12 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    position: relative;
     /* padding-left: 10px; */
+}
+
+.header-right{
+    position: relative;
 }
 
 .circle{
@@ -225,19 +296,26 @@
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
+    /* font-family: 'CircularSp'; */
 }
 .login{
     border: none;
     font-weight: 600;
     cursor: pointer;
+    /* font-family: 'CircularSp'; */
 }
 .popularArtist{
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(17, 17, 17);
 }
 
 .popularArtist2{
     background-color: rgb(17, 17, 17);
 }
+
+.popularArtistLast{
+    margin-bottom: 150px;
+}
+
 .popularArtist h2{
     color: white;
     padding-left: 20px;
@@ -247,6 +325,8 @@
 
 .card-container{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -312,4 +392,153 @@
 .card2 img{
     border-radius: 8px;
 }
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 99999999;
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    /* padding-bottom: 60px; */
+    height: 14vh;
+}
+
+.footer-play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.seek-bar{
+    height: 2px;
+    width: 40vw;
+    margin: auto;
+    background-color: white;
+    cursor: pointer;
+}
+
+.seek-bar-circle{
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    bottom: 4px;
+    left: 0%;
+    transition: left .5s;
+}
+
+.footer i{
+    font-size: 20px;
+    color: white;
+}
+.footer .fa-backward-step, .footer .fa-forward-step{
+    font-size: 20px;
+    color: rgb(110, 110, 110);
+}
+
+.footer .fa-pause{
+    color: black;
+}
+
+.play-pause{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 13px;
+}
+
+.play-pause i{
+    color: black;
+}
+
+.information{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cross{
+    color: rgb(186, 186, 186);
+    position: absolute;
+    right: 32px;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*                                                          Media Queries                                                           */
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    /////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 1150px) {
+    .left{
+        /* background-color: red; */
+        position: fixed;
+        left: -120%;
+        transition: all .8s;
+        z-index: 999999999;
+        width: 320px;
+    }
+    .right{
+        left: 0;
+        width: 100vw;
+        transition: all .8s;
+    }
+    .card-container{
+        justify-content: space-evenly;
+    }
+    .popularArtist h2{
+        text-align: center;
+    }
+    .header-left{
+        gap: 20px;
+    }
+    .hamberger{
+        display: block;
+        cursor: pointer;
+    }
+    .cross{
+        display: block;
+    }
+    
+
+}
+
+
+@media (max-width: 700px) {
+    .information{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .footer{
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px){
+    .footer{
+        height: 20vh;
+        opacity: .9;
+    }
+}
+
 

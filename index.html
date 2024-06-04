@@ -10,6 +10,7 @@
     <div class="container">
         <div class="left">
             <div class="left-top">
+                <div class="cross"><i class="fa-solid fa-xmark"></i></div>
                 <img class="invert left-top-elem" src="logo.svg" alt="">
                 <div class="home left-top-elem">
                     <img class="invert" src="Home.svg" alt="homeImg">
@@ -21,14 +22,18 @@
                 </div>
             </div>
             <div class="left-bottom">
-                <div class="lb-top">
+                <div class="lb-top" id="left-bottom-top">
                     <div class="library">
                         <img class="invert-img" src="library.svg" alt="library">
                         <a href="#">Your Library</a>
                     </div>
-                    <img class="invert-img" src="plus.svg" alt="">
+                    <img class="invert-img" id="plus" src="plus.svg" alt="">
                 </div>
                 <div class="playlist-scroll">
+                    <div class="songs-playlist">
+                        <ul class="list-of-songs">
+                        </ul>
+                    </div>
                     <div class="playlist">
                         <h4>Create your first playlist</h4>
                         <h5>It's easy we'll help you</h5>
@@ -57,6 +62,9 @@
         <div class="right">
             <div class="header">
                 <div class="header-left">
+                    <div class="hamberger">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
                     <div class="circle">
                         <img src="backarrow.svg" alt="backarrow">
                     </div>
@@ -248,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <div class="popularArtist popularArtist2">
+            <div class="popularArtist popularArtist2 popularArtistLast">
                 <h2>Spotify Playlist</h2>
                 <div class="card-container">
                     <div class="card card2">
@@ -290,7 +298,24 @@
             </div>
         </div>
     </div>
+        <div class="footer">
+            <div class="footer-play">
+                <i class="fa-solid fa-backward-step"></i>
+                <div class="play-pause">
+                    <i id="play" class="fa-solid fa-play"></i>
+                </div>
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div class="information">
+                <div class="songinfo"></div>
+                <div class="seek-bar">
+                    <div class="seek-bar-circle"></div>
+                </div>
+                <div class="songtime"></div>
+            </div>
+        </div>
 
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/66bad32ae2.js" crossorigin="anonymous"></script>
     
 </body>
