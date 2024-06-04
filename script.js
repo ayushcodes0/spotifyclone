@@ -64,7 +64,7 @@ async function main(){
             <i class="fa-solid fa-music"></i>
             <div class="song-name">${song.replaceAll("%20"," ")}</div>
         </div>
-        <div class="play-now"><i class="fa-solid fa-play"></i></div> 
+        <div class="play-now"><i id="play2" class="fa-solid fa-play"></i></div> 
         </li>`;
     }
 
