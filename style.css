@@ -342,7 +342,7 @@ body{
 
 .card img{
     border-radius: 50%;
-    height: 180px;
+    width: 180px;
 }
 
 .card h4{
@@ -520,6 +520,12 @@ body{
 
 }
 
+@media (max-width: 1075px) {
+    .card img{
+        width: 30vw;
+    }
+}
+
 
 @media (max-width: 700px) {
     .information{
@@ -532,12 +538,34 @@ body{
     .footer{
         padding-bottom: 30px;
     }
+    .card img{
+        width: 40vw;
+    }
+    .play-button{
+        top: 240px;
+    }
+    .card:hover .play-button{
+        top: 200px;
+        opacity: 1;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 500px){
     .footer{
         height: 20vh;
         opacity: .9;
+    }
+    .card img{
+        width: 70vw;
+    }
+    .play-button{
+        top: 240px;
+    }
+    .card:hover .play-button{
+        top: 200px;
+        opacity: 1;
+        cursor: pointer;
     }
 }
 
