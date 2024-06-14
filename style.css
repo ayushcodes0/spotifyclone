@@ -167,6 +167,10 @@ body{
     scroll-behavior: smooth;
 }
 
+.playlist-scroll::-webkit-scrollbar{
+    display: none;
+}
+
 
 .playlist h4{
     color: white;
